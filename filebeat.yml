@@ -1,7 +1,7 @@
 filebeat.prospectors:
 - input_type: log
   paths:
-    - /var/log/nginx/elk.log
+   # - /var/log/nginx/elk.log
     - /home/centos/logstash/temporal/bote.txt
     - /var/log/messages 
 - input_type: log
