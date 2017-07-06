@@ -2,6 +2,11 @@ filebeat.prospectors:
 - input_type: log
   paths:
     - /var/log/nginx/elk.log
-    - /home/centos/logstash/temporal/bote.txt 
+    - /home/centos/logstash/temporal/bote.txt
+    - /var/log/messages 
+- input_type: log
+  paths:
+    - /home/centos/logstash/temporal/FST.txt
+  document_type: fst
 output.logstash:
   hosts: ["localhost:5043"]
