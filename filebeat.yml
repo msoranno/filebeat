@@ -8,5 +8,11 @@ filebeat.prospectors:
   paths:
     - /home/centos/logstash/temporal/FST.txt
   document_type: fst
+
+- input_type: log
+  paths:
+    - /home/centos/logstash/temporal/familia.txt
+  document_type: familia
+
 output.logstash:
   hosts: ["localhost:5043"]
