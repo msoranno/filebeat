@@ -1,9 +1,9 @@
 filebeat.prospectors:
 - input_type: log
   paths:
-   # - /var/log/nginx/elk.log
-    - /home/centos/logstash/temporal/bote.txt
-    - /var/log/messages 
+    - /var/log/auth.log
+  document_type: auth
+
 - input_type: log
   paths:
     - /home/centos/logstash/temporal/FST.txt
@@ -11,8 +11,8 @@ filebeat.prospectors:
 
 - input_type: log
   paths:
-    - /home/centos/logstash/temporal/familia.txt
-  document_type: familia
+    - /home/elchivo/gastosMama/gastosMama*.csv
+  document_type: mama
 
 output.logstash:
   hosts: ["localhost:5043"]
